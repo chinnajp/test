@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" >
+                <h3>pop over</h3>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" >
+                <button class="btn btn-lg btn-success" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="popover title" data-bs-content="welcome to bootstrap popovercontent">top
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" title="popover title" data-bs-content="welcome to bootstrap popovercontent">left
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="buttom" title="popover title" data-bs-content="welcome to bootstrap popovercontent">buttom
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" title="popover title" data-bs-content="welcome to bootstrap popovercontent">right
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var popovertriggerlist = [].slice.cell(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverlist = popovertriggerlist.map(function(popovertriggerEl){
+            return new bootstrap.popover(popovertriggerEl)
+        });
+    </script>
+
+    <!-- javascript bundle with popper -->
+  
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+</body>
+</html>
